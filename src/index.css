@@ -1,13 +1,114 @@
-body {
+/* Googel Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=McLaren&display=swap");
+
+/* Global  */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navigation Bar */
+.navigation-bar {
+  position: relative;
+  z-index: 999;
+  background-color: #fff;
+  min-height: 10vh !important;
+}
+.logo img {
+  width: 65%;
+}
+.nav-link {
+  font-size: 18px !important;
+  margin-right: 15px;
+  font-weight: 500;
+}
+.active_menu {
+  color: #0d6efd !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+/* Footer */
+footer {
+  z-index: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 30px;
+}
+footer p {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 0;
+}
+
+/* Banner Section Home and About Page  */
+.banner-section {
+  width: 100%;
+  min-height: 80vh;
+}
+
+.right-content img {
+  animation: main-anim 2s infinite alternate;
+  -webkit-animation: main-anim 2s infinite alternate;
+}
+
+@keyframes main-anim {
+  0% {
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+  }
+}
+.left-content h2 {
+  font-size: 47px;
+  font-family: "McLaren", cursive;
+}
+.right-content img {
+  max-width: 78%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .right-content img {
+    margin: 40px auto;
+    max-width: 70%;
+  }
+}
+
+/* Error */
+.error-image {
+  width: 75%;
+  margin: 40px auto;
+}
+
+/* Form */
+form {
+  margin-bottom: 35px;
 }
